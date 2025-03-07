@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Bot, Mail, MessageCircle, Send } from 'lucide-react';
 import { toast } from 'sonner';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -41,24 +42,33 @@ const Contact = () => {
     e.preventDefault();
     setSending(true);
     
-    // Email sending logic - could be replaced with actual email service
-    const emailData = {
-      to: "yashwanthgowdaksyashugowda@gmail.com",
-      subject: `Portfolio Contact from ${name}`,
-      body: message,
-      from: email
+    // Initialize EmailJS with your service ID, template ID, and user ID
+    // You'll need to create an account on emailjs.com and set these up
+    const serviceId = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
+    const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+    const userId = 'YOUR_USER_ID'; // Replace with your EmailJS user ID
+    
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: 'Yashwanth Gowda KS',
+      to_email: 'yashwanthgowdaksyashugowda@gmail.com',
+      message: message
     };
     
-    console.log("Sending email:", emailData);
-    
-    // Simulate form submission - in a real scenario, you would connect to an email service
-    setTimeout(() => {
-      toast.success("Message sent successfully! Yashwanth will get back to you soon.");
-      setName('');
-      setEmail('');
-      setMessage('');
-      setSending(false);
-    }, 1500);
+    emailjs.send(serviceId, templateId, templateParams, userId)
+      .then(() => {
+        toast.success("Message sent successfully! Yashwanth will get back to you soon.");
+        setName('');
+        setEmail('');
+        setMessage('');
+        setSending(false);
+      })
+      .catch((error) => {
+        console.error('Email sending failed:', error);
+        toast.error("Failed to send message. Please try again later.");
+        setSending(false);
+      });
   };
 
   return (
