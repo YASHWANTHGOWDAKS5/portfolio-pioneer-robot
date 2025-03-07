@@ -69,7 +69,7 @@ const About = () => {
     <section id="about" className="section-container bg-accent/30" ref={sectionRef}>
       <h2 className="section-heading text-center">About Me</h2>
       <p className="section-subheading text-center mx-auto">
-        Passionate AI engineer with expertise in building intelligent systems and solving complex problems
+        Passionate AI/ML engineer with expertise in building intelligent systems and solving complex problems
       </p>
       
       <div ref={contentRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
@@ -80,7 +80,7 @@ const About = () => {
               Background
             </h3>
             <p className="text-muted-foreground mb-4">
-              As an AI Engineer, I specialize in developing intelligent systems that solve real-world problems. With a strong foundation in machine learning algorithms, neural network architectures, and data science, I create innovative solutions that drive business value and technological advancement.
+              As an AI/ML Engineer, I specialize in developing intelligent systems that solve real-world problems. With a strong foundation in machine learning algorithms, neural network architectures, and data science, I create innovative solutions that drive business value and technological advancement.
             </p>
             <p className="text-muted-foreground">
               My journey in AI began with a fascination for how machines can learn and adapt. This curiosity led me to explore various aspects of artificial intelligence, from supervised learning to reinforcement learning, eventually specializing in deep learning architectures and their applications.
@@ -94,12 +94,8 @@ const About = () => {
             </h3>
             <div className="space-y-4">
               <div className="p-4 bg-background/50 border border-border rounded-lg">
-                <h4 className="font-semibold">Master's in Artificial Intelligence</h4>
-                <p className="text-sm text-muted-foreground">Stanford University, 2018-2020</p>
-              </div>
-              <div className="p-4 bg-background/50 border border-border rounded-lg">
-                <h4 className="font-semibold">Bachelor's in Computer Science</h4>
-                <p className="text-sm text-muted-foreground">MIT, 2014-2018</p>
+                <h4 className="font-semibold">B.E. in AI/ML Engineering</h4>
+                <p className="text-sm text-muted-foreground">MIT Mysore, 4th Semester (Current)</p>
               </div>
             </div>
           </div>

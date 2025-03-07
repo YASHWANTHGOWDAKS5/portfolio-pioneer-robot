@@ -18,7 +18,7 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                 <Brain className="w-5 h-5 text-primary" />
               </div>
-              <span className="font-bold text-xl tracking-tight">AI Engineer</span>
+              <span className="font-bold text-xl tracking-tight">Yashwanth Gowda KS</span>
             </div>
           </div>
           
@@ -57,7 +57,7 @@ const Footer = () => {
         
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} AI Engineer Portfolio. All rights reserved.
+            &copy; {new Date().getFullYear()} Yashwanth Gowda KS. All rights reserved.
           </p>
           
           <div className="flex space-x-8">
