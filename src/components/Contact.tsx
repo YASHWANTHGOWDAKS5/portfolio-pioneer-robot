@@ -41,9 +41,19 @@ const Contact = () => {
     e.preventDefault();
     setSending(true);
     
-    // Simulate form submission
+    // Email sending logic - could be replaced with actual email service
+    const emailData = {
+      to: "yashwanthgowdaksyashugowda@gmail.com",
+      subject: `Portfolio Contact from ${name}`,
+      body: message,
+      from: email
+    };
+    
+    console.log("Sending email:", emailData);
+    
+    // Simulate form submission - in a real scenario, you would connect to an email service
     setTimeout(() => {
-      toast.success("Message sent successfully! I'll get back to you soon.");
+      toast.success("Message sent successfully! Yashwanth will get back to you soon.");
       setName('');
       setEmail('');
       setMessage('');
@@ -62,7 +72,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="md:col-span-2 space-y-6">
             <div className="opacity-0 animate-delay-100">
-              <h3 className="text-xl font-bold mb-4">Contact Information</h3>
+              <h3 className="text-xl font-bold mb-4">Contact Yashwanth Gowda KS</h3>
               <p className="text-muted-foreground mb-6">
                 Feel free to reach out for collaborations, AI consultations, or just to say hello!
               </p>

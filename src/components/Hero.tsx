@@ -59,6 +59,7 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+            <span className="block mb-2">Yashwanth Gowda KS</span>
             Building the future with 
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"> intelligent systems</span>
           </h1>
